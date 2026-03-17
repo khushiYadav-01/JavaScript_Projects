@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Time</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --accent: #e77c2f;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--text-main);
+}
+
+/* Main Card */
+.clock-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 50px 40px;
+  border-radius: 25px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.clock-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border-color: var(--accent);
+}
+
+/* Heading */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+}
+
+/* Time */
+.time {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* Date */
+.date {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .time {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="clock-container">
+  <div class="title">🇮🇳 India Standard Time</div>
+  <div class="subtitle">Asia/Kolkata</div>
+
+
+  <div class="time" id="root">--:--:--</div>
+   <!-- <div class="date" id="india-date">Loading...</div>  -->
+</div>
+<Script src = "/first.js"> </Script>
+    
+</body>
+</html>
