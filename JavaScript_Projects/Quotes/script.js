@@ -26,3 +26,22 @@ const quotes = [
  document.getElementById("quote").innerHTML = quotes[index]
 
 }
+//color
+const backgrounds = [
+  "linear-gradient(135deg, #e0e7ff, #f1f5f9)",  // soft bluish
+  "linear-gradient(135deg, #eef2ff, #e0e7ff)",  // light indigo
+  "linear-gradient(135deg, #f1f5f9, #e2e8f0)",  // cool gray
+  "linear-gradient(135deg, #e0f2fe, #f0f9ff)",  // soft sky blue
+  "linear-gradient(135deg, #f8fafc, #e2e8f0)",  // very light gray
+  "linear-gradient(135deg, #e6f0ff, #f5faff)",  // pale blue
+  "linear-gradient(135deg, #edf2ff, #f8fafc)",  // smooth blend
+  "linear-gradient(135deg, #e0f7fa, #f1f5f9)"   // slight cyan touch
+];
+
+function changecolor() {
+  const index = Math.floor(Math.random() * backgrounds.length);
+  document.body.style.background = backgrounds[index];
+}
+
+// run every 2 seconds
+setInterval(changecolor, 500);
